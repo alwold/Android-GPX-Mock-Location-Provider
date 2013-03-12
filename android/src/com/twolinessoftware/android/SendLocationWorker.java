@@ -58,6 +58,8 @@ public class SendLocationWorker extends Worker {
 		loc.setLatitude(latitude);
 		loc.setLongitude(longitude);
 		loc.setTime(sendTime);
+		loc.setAccuracy(3);
+		loc.setElapsedRealtimeNanos(sendTime);
 		Log.d("SendLocation", "Sending update for " + providerName);
 		mLocationManager.setTestProviderLocation(providerName, loc);
 
