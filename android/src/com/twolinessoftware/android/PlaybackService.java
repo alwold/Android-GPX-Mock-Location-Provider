@@ -166,7 +166,7 @@ public class PlaybackService extends Service implements GpxSaxParserListener {
 			cancelExistingTaskIfNecessary(); 
     		
     		task = new ReadFileTask(file);
-    		task.execute(null);
+    		task.execute();
     	    		
     		 // Display a notification about us starting.  We put an icon in the status bar.
             showNotification();	
